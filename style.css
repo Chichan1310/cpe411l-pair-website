@@ -456,3 +456,20 @@ tbody tr:nth-child(even) {
   color: #e11d48;
   font-weight: 600;
 }
+.amenities {
+  margin-top: 4rem;
+}
+
+.amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.amenity-grid div {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 500;
+}
