@@ -22,53 +22,85 @@
 
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        padding: 40px;
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f3f1ee;
       }
 
-      .faq-container {
-        max-width: 700px;
-        margin: auto;
-        background: #ffffff;
-        padding: 20px 30px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .faq-container h2 {
+      /* About Section */
+      .about-section {
+        padding: 60px 20px;
+        background: linear-gradient(to right, #e6ded4, #f7f3ee);
         text-align: center;
-        margin-bottom: 20px;
       }
 
-      .faq-item {
-        border-bottom: 1px solid #ddd;
-        padding: 10px 0;
+      .about-section h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        color: #3e3e3e;
       }
 
-      .faq-question {
-        cursor: pointer;
-        font-weight: bold;
-        position: relative;
-        padding-right: 20px;
-      }
-
-      .faq-question::after {
-        content: "+";
-        position: absolute;
-        right: 0;
+      .about-section p {
+        max-width: 800px;
+        margin: auto;
         font-size: 18px;
-      }
-
-      .faq-question.active::after {
-        content: "-";
-      }
-
-      .faq-answer {
-        display: none;
-        margin-top: 8px;
         color: #555;
-        line-height: 1.5;
+        line-height: 1.7;
+      }
+
+      /* Rooms Section */
+      .rooms-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+      }
+
+      .rooms-section h2 {
+        text-align: center;
+        font-size: 34px;
+        margin-bottom: 40px;
+        color: #3e3e3e;
+      }
+
+      .rooms-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .room-card {
+        background: #f9f7f4;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .room-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .room-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .room-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .room-content h3 {
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      .room-content p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.6;
       }
     </style>
   </head>
@@ -205,5 +237,83 @@
         </ul>
       </div>
     </div>
+    <!--main-content-->
+
+    <!-- MAIN CONTENT -->
+
+    <!-- ABOUT HOTEL SECTION -->
+    <section class="about-section">
+      <h2>About Our Hotel</h2>
+      <p>
+        Welcome to our hotel, where comfort meets elegance. We provide
+        beautifully designed rooms, modern amenities, and warm hospitality to
+        make your stay truly unforgettable. Whether you are traveling for
+        business or leisure, our hotel offers a peaceful atmosphere with
+        world-class service.
+      </p>
+    </section>
+
+    <!-- ROOMS SECTION -->
+    <section class="rooms-section">
+      <h2>Our Rooms</h2>
+
+      <div class="rooms-container">
+        <!-- ROOM 1 -->
+        <div class="room-card">
+          <img src="room1.jpg" alt="Deluxe Room" />
+          <div class="room-content">
+            <h3>Deluxe Room</h3>
+            <p>
+              Our Deluxe Room offers a spacious and comfortable stay with a
+              king-size bed, air conditioning, free Wi-Fi, and a beautiful city
+              view. Perfect for couples and business travelers.
+            </p>
+          </div>
+        </div>
+
+        <!-- ROOM 2 -->
+        <div class="room-card">
+          <img src="room2.jpg" alt="Family Room" />
+          <div class="room-content">
+            <h3>Family Room</h3>
+            <p>
+              Designed for families, this room features two large beds, modern
+              furnishings, a private bathroom, and all essential amenities to
+              ensure a relaxing stay for everyone.
+            </p>
+          </div>
+        </div>
+
+        <!-- ROOM 3 -->
+        <div class="room-card">
+          <img src="room3.jpg" alt="Suite Room" />
+          <div class="room-content">
+            <h3>Suite Room</h3>
+            <p>
+              Experience luxury in our Suite Room with a separate living area,
+              premium décor, smart TV, high-speed internet, and stunning views
+              for an elegant hotel experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const questions = document.querySelectorAll(".faq-question");
+
+      questions.forEach((question) => {
+        question.addEventListener("click", () => {
+          question.classList.toggle("active");
+          const answer = question.nextElementSibling;
+
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
