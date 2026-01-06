@@ -136,7 +136,7 @@ header {
   width: 38px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(img/hardylutula.jpeg);
+  background-image: url(img/image.jpg);
   border-radius: 50%;
 }
 
@@ -279,7 +279,7 @@ tbody tr:nth-child(even) {
 }
 
 .img-1 {
-  background-image: url(img/hardylutula.jpeg);
+  background-image: url(img/image.jpg);
 }
 .img-2 {
   background-image: url(img/hardy2.jpeg);
@@ -331,7 +331,7 @@ tbody tr:nth-child(even) {
   border: solid 3px #efefef;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(img/hardylutula.jpeg);
+  background-image: url(img/image.jpg);
   margin-left: 0.7rem;
 }
 
