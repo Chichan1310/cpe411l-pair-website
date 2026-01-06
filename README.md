@@ -20,7 +20,7 @@ ONE Hotel is a modern and responsive hotel booking website homepage designed to 
 
 ### 📂 Sidebar Navigation
 
-![Sidebar](assets/images/sidebar.png)
+![Dashboard](assets/images/dashboard.png)
 
 ---
 
